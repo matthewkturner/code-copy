@@ -1,0 +1,25 @@
+{
+  "name": "code-copy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "content.js",
+  "scripts": {
+    "build": "cp -r ./src/** ./dist && babel src -d dist/",
+    "deploy": "find ./dist -path '*/.*' -prune -o -type f -print | zip ./release.zip -@",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthewkturner/code-copy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matthewkturner/code-copy/issues"
+  },
+  "homepage": "https://github.com/matthewkturner/code-copy#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  }
+}
